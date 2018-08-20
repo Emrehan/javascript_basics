@@ -1,0 +1,35 @@
+<% if(typeof username!='undefined'){ %>
+
+    <h1>Merhaba <%= username %>! Şifren => <%= pass %> </h1>
+
+<% } %>
+
+
+
+<form action="/login" method="post" class="form-signin">
+    <div class="imgcontainer">
+        <img src="/public/images/e.png" style="width: 100px;" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button  type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+</form>
+
+
+
+surgery=2,age=9,hospitalnumber,rectaltemperature,pulse,respiratoryrate,temperatureofextremities=1,temperatureofextremities=2,temperatureofextremities=3,temperatureofextremities=4,peripheralpulse=1,peripheralpulse=2,peripheralpulse=3,peripheralpulse=4,mucousmembranes=1,mucousmembranes=2,mucousmembranes=3,mucousmembranes=4,mucousmembranes=5,mucousmembranes=6,capillaryrefilltime=1,capillaryrefilltime=2,capillaryrefilltime=3,painlevel=1,painlevel=2,painlevel=3,painlevel=4,painlevel=5,peristalsis=1,peristalsis=2,peristalsis=3,peristalsis=4,abdominaldistension=1,abdominaldistension=2,abdominaldistension=3,abdominaldistension=4,nasogastrictube=1,nasogastrictube=2,nasogastrictube=3,nasogastricreflux=1,nasogastricreflux=2,nasogastricreflux=3,nasogastricrefluxph,rectalexamination=1,rectalexamination=2,rectalexamination=3,rectalexamination=4,abdomen=1,abdomen=2,abdomen=3,abdomen=4,abdomen=5,packedcellvolume,totalprotein,abdominocentesisappearance=1,abdominocentesisappearance=2,abdominocentesisappearance=3,abdomcentesistotalprotein,outcome=1,outcome=2,outcome=3,surgicallesion=2,typeoflesion1,typeoflesion2,typeoflesion3,cpdata

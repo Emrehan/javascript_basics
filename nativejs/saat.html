@@ -1,0 +1,25 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var saniye=58,dakika=59,saat=23, i;
+			
+			while(saat!=1){
+				dakika += parseInt(saniye/60);
+				saniye %= 60;
+				
+				saat += parseInt(dakika/60);
+				dakika %= 60;
+
+				saat %= 24;
+				
+				document.write(saat+":"+dakika+":"+saniye+"\n");
+				
+				saniye++;
+			}
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,73 @@
+<html>
+	<body>
+		<canvas id="canvas1" height=480 width=640 style="border:1px solid" >Canvas bu browserda desteklenmiyor.</canvas>
+		
+		<script>
+            function clearCanvas() {
+                console.warn("X");
+                p.beginPath();
+                p.fillStyle = "#FFFFFF";
+                p.fillRect(0,0,canvas.width,canvas.height);
+                p.closePath();
+
+                p.fill();
+            }
+            function mouseFunction(e) {
+                clearCanvas();
+                p.beginPath();
+                p.arc(e.x-10,e.y-10,10,0,2*Math.PI);
+                p.closePath();
+
+                p.fillStyle = "#FF0000";
+                p.fill();
+            }
+            var canvas = document.getElementById("canvas1");
+            var p = canvas.getContext("2d");
+
+            canvas.addEventListener("mousemove",mouseFunction);
+
+
+            //click  mousemove
+            /*canvas.addEventListener("mousemove",function (e) {
+                clearCanvas();
+                p.beginPath();
+                p.arc(e.x,e.y,10,0,2*Math.PI);
+                p.closePath();
+
+                p.fillStyle = "#FF0000";
+                p.fill();
+            });*/
+
+            /*p.beginPath();
+
+            p.moveTo(0,0);
+            p.lineTo(300,300);
+
+            p.moveTo(640,0);
+            p.lineTo(500,100);
+
+            p.moveTo(300,0);
+            p.lineTo(300,300);
+
+            p.moveTo(350,300);
+            p.arc(300,300,50,0,2*Math.PI);
+
+            p.moveTo(305,300);
+            p.arc(300,300,5,0,2*Math.PI);
+
+            p.font = "30px Arial";
+
+            p.fillRect(490,100,20,40);
+
+            p.fillText("Emrehan141",4,476);
+
+            p.closePath();
+            p.stroke();*/
+
+
+			
+		
+		</script>
+		
+	</body>
+</html>

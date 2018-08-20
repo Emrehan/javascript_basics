@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+
+    <script>
+        function changeImage(toRight) {
+            var imageCount=5;
+            var imgC = document.getElementById('mainImg');
+            var i = imgC.src.split('/')[imgC.src.split('/').length-1].split('.')[0];
+            imgC.src = "images/"+(toRight?++i:(i==0?imageCount-1:--i))%imageCount+".jpg";
+        }
+        
+        function validateForm() {
+            var s = [document.getElementById('i1'), document.getElementById('i2')];
+
+            if (s[0].value=="" || s[1].value==""){
+                alert("Must not be empty.");
+                return false;
+            } else if(s[0].value==s[1].value){
+                alert("Must not be same.");
+                return false;
+            }
+            return true;
+        }
+
+
+    </script>
+</head>
+<body>
+<button onclick="changeImage(false)"><</button>
+<img id="mainImg" src="images/0.jpg">
+<button onclick="changeImage(true)">></button>
+
+<form onsubmit="return validateForm()" method="post">
+    1= <input type="text" name="i1" id="i1" />
+    2= <input type="text" name="i2" id="i2" />
+    <input type="submit" name="s1" id="s1" />
+</form>
+
+</body>
+</html>

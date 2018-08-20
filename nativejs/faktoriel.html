@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script>
+			function faktoriel(x){
+				var result=1;
+				for(var i=x; i>0; i--){
+					result*=i;
+				}
+				return result;
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<script>
+			document.write("<br><b>i2 => "+i+"</b>");
+			var step=60;
+			for(var i=0; i<step; i++){
+				document.write(i+" "+faktoriel(i)+"<br>");
+			}
+		
+		</script>
+	</body>
+</html>
